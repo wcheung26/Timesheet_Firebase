@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TimeSheet</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="ts.css">
+	<!-- Firebase reference -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+</head>
+<body>
+
+	<div class="jumbotron">
+		<h1>Employee Data Management</h1>
+		<h2>A comprehensive directory of employee billable hours</h2>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">Current Employees</div>
+		<div class="panel-body">
+		<table id="entries">
+			<tr>
+				<th>Employee Name</th>
+				<th>Role</th>
+				<th>Start Date</th>
+				<th>Months Worked</th>
+				<th>Monthly Rate ($)</th>
+				<th>Total Billed ($)</th>
+				<th>Remove?</th>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">Add Employee</div>
+		<div class="panel-body">
+		<form>
+			<p>Employee Name <br> <input type="text" id="name"></p>
+			<p>Role <br> <input type="text" id="role"></p>
+			<p>Start Date (DDMMYY) <br> <input type="text" id="date"></p>
+			<p>Monthly Rate <br> <input type="text" id="rate"></p>
+			<input type="submit" id="submit">
+		</form>
+		</div>
+	</div>
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<script src="timesheet.js"></script>
+</body>
+</html>
